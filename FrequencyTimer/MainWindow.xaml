@@ -1,0 +1,36 @@
+﻿<Window x:Class="FrequencyTimer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FrequencyTimer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="0" Grid.Row="0" FontSize="18px" Content="Hz:" Margin="10"
+               Height="30" Width="Auto" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <TextBox Grid.Column="1" Grid.Row="0" FontSize="18px" Margin="10" Name="Input"
+                 Height="30" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"/>
+        <Button Grid.Column="2" Grid.Row="0" FontSize="18px" Content="Start" Margin="10" Click="Button_Start"
+                Height="30" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Bottom" Name="StartButton"/>
+        <Button Grid.Column="2" Grid.Row="0" FontSize="18px" Content="Stop" Margin="10" Click="Button_Stop" Visibility="Hidden"
+        Height="30" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Bottom" Name="StopButton"/>
+
+
+        <Label Grid.Column="1" Grid.Row="1" FontSize="30px" Content="" Margin="0,10,0,0" Name="Result"
+       Height="64" Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
